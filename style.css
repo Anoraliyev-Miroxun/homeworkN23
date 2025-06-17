@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contayner {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cart{
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+img{
+    width: 100%;
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    width: 80%;
+    padding: 10px;
+}
