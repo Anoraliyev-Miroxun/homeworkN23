@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "b993b5cc-bdd2-4602-995d-01d4c2394e15",
+		"name": "3-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-b993b5cc-bdd2-4602-995d-01d4c2394e15?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "unversitet",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Miliy\",\n    \"fakultet\":\"geografiya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/unversitet",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"unversitet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Miliy\",\n    \"fakultet\":\"geografiya\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5555/unversitet/687a44fb358afbfc189bfd36",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"unversitet",
+								"687a44fb358afbfc189bfd36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"r\",\n    \"fakultet\":\"geografiya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/unversitet/687a44fb358afbfc189bfd36",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"unversitet",
+								"687a44fb358afbfc189bfd36"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "groups",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"geografiya\",\n    \"oquchilarSoni\":100,\n    \"unversitet_id\":\"687a44fb358afbfc189bfd36\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/groups",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5555/groups/687a4569358afbfc189bfd39",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"groups",
+								"687a4569358afbfc189bfd39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/groups/687a4569358afbfc189bfd39",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"groups",
+								"687a4569358afbfc189bfd39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "talaba",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"ozod\",\n    \"fakultet\":\"tehnika\",\n    \"group_id\":\"687a4577358afbfc189bfd3c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/talaba",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"talaba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5555/talaba/687a45cd358afbfc189bfd3f",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"talaba",
+								"687a45cd358afbfc189bfd3f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"bu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5555/talaba/687a45cd358afbfc189bfd3f",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"talaba",
+								"687a45cd358afbfc189bfd3f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

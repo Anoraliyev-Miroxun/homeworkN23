@@ -1,13 +1,22 @@
 
 
 import Groupse from '../modules/group.modul.js';
-import { isValidObjectId } from 'mongoose';
+import mongoose, { isValidObjectId } from 'mongoose';
+import {groupsSchema,groupsSchemaUpdate} from '../validations/index.js';
 
 
 
 class GroupsController {
     async createGroup(req, res) {
         try {
+            const {error}=groupsSchema.validate(req.body);
+            if(error){
+                return res.status(400).json({
+                    statusCode:400,
+                    message:error.message
+                });
+            };
+
             const exsistGroups = await Groupse.findOne({ name: req.body.name });
             if (exsistGroups) {
                 return res.status(409).json({
@@ -35,7 +44,38 @@ class GroupsController {
 
     async getGroup(req, res) {
         try {
-            const hammaGroups = await Groupse.find().populate("unversitet_id").populate("talaba_id");
+            const hammaGroups = await Groupse.aggregate([
+                {
+                    $lookup: {
+                        from: "unversitets",
+                        localField: "unversitet_id",
+                        foreignField: "_id",
+                        as: "unversitetInfo"
+                    }
+                },
+                {
+                    $unwind: "$unversitetInfo"
+                },
+                {
+                    $lookup: {
+                        from: "talabas",
+                        localField: "_id",
+                        foreignField: "group_id",
+                        as: "talabaInfo"
+                    }
+                },
+                {
+                    $unwind: "$talabaInfo"
+                },
+                {
+                    $project: {
+                        _id: 1,
+                        name: 1,
+                        unversitet_name: "$unversitetInfo.name",
+                        talaba_name: '$talabaInfo.name'
+                    }
+                }
+            ]);
             return res.status(200).json({
                 statusCode: 200,
                 message: "success",
@@ -62,7 +102,41 @@ class GroupsController {
             }
 
 
-            const hammaUnversitet = await Groupse.findById(id).populate("unversitet_id").populate("talaba_id")
+            const hammaUnversitet = await Groupse.aggregate([
+                {
+                    $match:{_id:new mongoose.Types.ObjectId(id)}
+                },
+                {
+                    $lookup: {
+                        from: "unversitets",
+                        localField: "unversitet_id",
+                        foreignField: "_id",
+                        as: "unversitetInfo"
+                    }
+                },
+                {
+                    $unwind: "$unversitetInfo"
+                },
+                {
+                    $lookup: {
+                        from: "talabas",
+                        localField: "_id",
+                        foreignField: "group_id",
+                        as: "talabaInfo"
+                    }
+                },
+                {
+                    $unwind: "$talabaInfo"
+                },
+                {
+                    $project: {
+                        _id: 0,
+                        name: 1,
+                        unversitet_name: "$unversitetInfo.name",
+                        talaba_name: '$talabaInfo.name'
+                    }
+                }
+            ]);
             if (!hammaUnversitet) {
                 return res.status(404).json({
                     statusCode: 404,
@@ -95,6 +169,13 @@ class GroupsController {
                 })
             }
 
+            const {error}=groupsSchemaUpdate.validate(req.body);
+            if(error){
+                return res.status(400).json({
+                    statusCode:400,
+                    message:error.message
+                });
+            };
 
             const hammaUnversitet = await Groupse.findById(id);
             if (!hammaUnversitet) {
@@ -104,7 +185,7 @@ class GroupsController {
                 })
             }
 
-            const ynagilanganUnversitet = await Groupse.findOneAndUpdate(id, req.body, { new: true }).populate("unversitet_id").populate("talaba_id")
+            const ynagilanganUnversitet = await Groupse.findOneAndUpdate({_id:id}, req.body, { new: true }).populate("unversitet_id").populate("talaba_id")
             return res.status(200).json({
                 statusCode: 200,
                 message: "success",
@@ -157,7 +238,7 @@ class GroupsController {
 
 
 
-const groupsController=new GroupsController();
+const groupsController = new GroupsController();
 
 export default groupsController;
 

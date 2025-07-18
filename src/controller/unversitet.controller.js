@@ -1,9 +1,18 @@
 import Unversitet from '../modules/unersitet.modul.js';
-import { isValidObjectId } from 'mongoose';
+import mongoose, { isValidObjectId } from 'mongoose';
+import { unversitetSchema, unversitetSchemaUpdate } from '../validations/index.js';
 
 export class UnversitetController {
     async createUnversitet(req, res) {
         try {
+            const { error } = unversitetSchema.validate(req.body)
+            if (error) {
+                return res.status(400).json({
+                    statusCode: 400,
+                    message: error.message
+                });
+            };
+
             const exsistUnversitet = await Unversitet.findOne({ name: req.body.name });
             console.log(exsistUnversitet);
             if (exsistUnversitet) {
@@ -15,7 +24,7 @@ export class UnversitetController {
 
 
             const yangiUnversitet = await Unversitet.create(req.body);
-           
+
             return res.status(201).json({
                 statusCode: 201,
                 message: "success",
@@ -32,7 +41,38 @@ export class UnversitetController {
 
     async getUnversitet(req, res) {
         try {
-            const hammaUnversitet = await Unversitet.find().populate({path:"groups",populate:{path:"talaba_id"}});
+            const hammaUnversitet = await Unversitet.aggregate([
+                {
+                    $lookup: {
+                        from: "groupses",
+                        localField: "_id",
+                        foreignField: "unversitet_id",
+                        as: "groupsInfo"
+                    }
+                },
+                {
+                    $unwind: "$groupsInfo"
+                },
+                {
+                    $lookup: {
+                        from: "talabas",
+                        localField: "groupsInfo._id",
+                        foreignField: "group_id",
+                        as: "talabaInfo"
+                    }
+                },
+                {
+                    $unwind: "$talabaInfo"
+                },
+                {
+                    $project: {
+                        _id: 1,
+                        name: 1,
+                        group_name: "$groupsInfo.name",
+                        talaba_name: '$talabaInfo.name'
+                    }
+                }
+            ]);
             console.log(hammaUnversitet)
             return res.status(200).json({
                 statusCode: 200,
@@ -61,7 +101,41 @@ export class UnversitetController {
             }
 
 
-            const hammaUnversitet = await Unversitet.findById(id).populate({path:"groups",populate:{path:"talaba_id"}});
+            const hammaUnversitet = await Unversitet.aggregate([
+                {
+                    $match: { _id: new mongoose.Types.ObjectId(id) }
+                },
+                {
+                    $lookup: {
+                        from: "groupses",
+                        localField: "_id",
+                        foreignField: "unversitet_id",
+                        as: "groupsInfo"
+                    }
+                },
+                {
+                    $unwind: "$groupsInfo"
+                },
+                {
+                    $lookup: {
+                        from: "talabas",
+                        localField: "groupsInfo._id",
+                        foreignField: "group_id",
+                        as: "talabaInfo"
+                    }
+                },
+                {
+                    $unwind: "$talabaInfo"
+                },
+                {
+                    $project: {
+                        _id: 0,
+                        name: 1,
+                        group_name: "$groupsInfo.name",
+                        talaba_name: '$talabaInfo.name'
+                    }
+                }
+            ]);
             if (!hammaUnversitet) {
                 return res.status(404).json({
                     statusCode: 404,
@@ -94,7 +168,13 @@ export class UnversitetController {
                 })
             }
 
-
+            const { error } = unversitetSchemaUpdate.validate(req.body)
+            if (error) {
+                return res.status(400).json({
+                    statusCode: 400,
+                    message: error.message
+                });
+            };
             const hammaUnversitet = await Unversitet.findById(id);
             if (!hammaUnversitet) {
                 return res.status(404).json({
@@ -102,9 +182,9 @@ export class UnversitetController {
                     message: "bunday id dagi unversitet topilmadi"
                 })
             }
-            console.log("salommmmmmmmmmmm")
+
             const ynagilanganUnversitet = await Unversitet.findByIdAndUpdate(id, req.body, { new: true })
-            console.log("nimmmmmmmmmmmmmmmmmmmm")
+
             return res.status(200).json({
                 statusCode: 200,
                 message: "success",
