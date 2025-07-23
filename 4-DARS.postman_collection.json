@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "a961af38-e442-408c-bf68-2a4f3d937306",
+		"name": "4-DARS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-a961af38-e442-408c-bf68-2a4f3d937306?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Toshmat1\",\n    \"password\":\"Toshmat1231!\",\n    \"email\":\"toshmat@gmail.com1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Toshmat1\",\n    \"password\":\"Toshmat1231!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/admin/singin",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"admin",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
