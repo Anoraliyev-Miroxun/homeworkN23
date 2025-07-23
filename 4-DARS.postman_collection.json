@@ -63,6 +63,65 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "applic",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/admin/generedtoken",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"admin",
+						"generedtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}"
+				},
+				"url": {
+					"raw": "localhost:1111/api/admin/singout",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"admin",
+						"singout"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
