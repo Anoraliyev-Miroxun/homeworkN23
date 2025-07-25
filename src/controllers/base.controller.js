@@ -9,7 +9,7 @@ export class BaseController {
         this.model = model
     };
 
-    create = async (req, res) => {
+    create = async (req, res,next) => {
         try {
             const data = await this.model.create(req.body);
             return successRes(res, data, 201);
@@ -18,7 +18,7 @@ export class BaseController {
         }
     }
 
-    getById = async (req, res) => {
+    getById = async (req, res,next) => {
         try {
             const id = req.params.id;
             if (!isValidObjectId(id)) {
@@ -30,7 +30,7 @@ export class BaseController {
 
             };
 
-            return successRes(res, data)
+            return successRes(res, data,next)
         } catch (error) {
             next(error)
         }
@@ -45,7 +45,7 @@ export class BaseController {
         }
     }
 
-    update = async (req, res) => {
+    update = async (req, res,next) => {
         try {
             const id = req.params.id;
             if (!isValidObjectId(id)) {
@@ -64,7 +64,7 @@ export class BaseController {
         }
     }
 
-    delete = async (req, res) => {
+    delete = async (req, res,next) => {
         try {
             const id = req.params.id;
             if (!isValidObjectId(id)) {

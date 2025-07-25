@@ -12,7 +12,7 @@ class AdminController extends BaseController {
         super(Admin)
     };
 
-    async createAdmin(req, res) {
+    async createAdmin(req, res,next) {
         try {
             const { username, password, email } = req.body;
             const exsistUsername = await Admin.findOne({ username })
@@ -37,7 +37,7 @@ class AdminController extends BaseController {
         }
     }
 
-    async singIn(req, res) {
+    async singIn(req, res,next) {
         try {
             const { password, username } = req.body;
             const admin = await Admin.findOne({ username });
@@ -63,7 +63,7 @@ class AdminController extends BaseController {
         }
     }
 
-    async generetNewToken(req, res) {
+    async generetNewToken(req, res,next) {
         try {
             const refreshToken = req.cookies?.refreshTokenKey;
             if (!refreshToken) {
@@ -100,7 +100,7 @@ class AdminController extends BaseController {
 
 
 
-    async singOut(req, res) {
+    async singOut(req, res,next) {
         try {
             const refreshToken = req.cookies?.refreshTokenKey;
             if (!refreshToken) {
