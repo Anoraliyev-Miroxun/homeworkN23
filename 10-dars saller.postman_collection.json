@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "bcaf1ec1-f4e4-467e-ab67-bc7a0ccf04d1",
+		"name": "10-dars saller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-bcaf1ec1-f4e4-467e-ab67-bc7a0ccf04d1?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4N2Y2ZmZiYmI4MjkwOTBkNTA3YWE3ZCIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1MzM1NDM3OCwiZXhwIjoxNzUzNDQwNzc4fQ.fG-Mn61XbDhgAYMgWmdhL9r7W44Wkl8T8CZwH4BW7m4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"phoneNumber\":\"+998900996602\",\n\"fullName\":\"Miroxun Anoraliyev\",\n\"email\":\"miroxunanaraliyev@gmail.com\",\n\"password\":\"Miroxun123!\",\n\"address\":\"Toshkent\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/saller",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"saller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4N2Y2ZmZiYmI4MjkwOTBkNTA3YWE3ZCIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1MzM1NDM3OCwiZXhwIjoxNzUzNDQwNzc4fQ.fG-Mn61XbDhgAYMgWmdhL9r7W44Wkl8T8CZwH4BW7m4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"phoneNumber\":\"+998900996602\",\n\"password\":\"Miroxun123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/saller/singin",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"saller",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODhmMDU1ZTM2MDZmMTFmOTc3OWI2NSIsInJvbGUiOiJTQUxMRVIiLCJpc0FjdGl2ZSI6ZmFsc2UsImlhdCI6MTc1MzgwNDk4NSwiZXhwIjoxNzUzODkxMzg1fQ.QAF3ki_jQzyDzvNRKJE9hEncYG_YgZKjtHLMt8ilX7s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"phoneNumber\":\"+998900996602\",\n\"password\":\"Miroxun123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/saller/signout",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"saller",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/saller/6888f055e3606f11f9779b65",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"saller",
+						"6888f055e3606f11f9779b65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4N2Y2ZmZiYmI4MjkwOTBkNTA3YWE3ZCIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1MzM1NDM3OCwiZXhwIjoxNzUzNDQwNzc4fQ.fG-Mn61XbDhgAYMgWmdhL9r7W44Wkl8T8CZwH4BW7m4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phoneNumber",
+							"value": "+998900999999",
+							"type": "text"
+						},
+						{
+							"key": "fullName",
+							"value": "Doniyor Nurdillayev",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "doniyornurdillayev@gmil.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Doniyor123!",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/miroxun/Downloads/720__TLgMoB9AeHzPEROEd5TPigqyD86NL7Ve.jpg"
+						},
+						{
+							"key": "address",
+							"value": "Toshkent",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1111/api/saller",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"saller"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
