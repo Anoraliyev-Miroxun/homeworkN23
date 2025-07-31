@@ -1,5 +1,5 @@
 import { BaseController } from "./base.controller.js";
-import Saller from '../models/seller.model.js';
+import Saller from '../models/ega.model.js';
 import { AppError } from "../error/AppError.js"; 
 import crypto from '../utils/Crypto.js';
 import {successRes} from '../utils/success-res.js';

@@ -7,18 +7,14 @@ const CategorySchema = new Schema({
     timestamps: true,
     versionKey: false,
     virtuals: true,
-    toObject: {
-        virtuals: true
-    },
-    toJSON: {
-        virtuals: true
-    }
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true }
 });
 
-CategorySchema.virtual('products', {
-    ref: 'Product',
+CategorySchema.virtual('kurslar', {
+    ref: 'Kurslar',
     localField: '_id',
-    foreignField: 'category'
+    foreignField: 'category_id'
 });
 
 const Category = model('Category', CategorySchema);

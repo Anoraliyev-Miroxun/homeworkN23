@@ -1,33 +1,29 @@
 import { Schema, model } from "mongoose";
 import { Roles } from "../const/index.js";
 
-const SallerSchema = new Schema({
-    phoneNumber: { type: String, unique: true, required: true },
+
+const EgaSchema = new Schema({
+    userName: { type: String, required: true, unique: true },
     fullName: { type: String, required: true },
     email: { type: String, unique: true, required: true },
     hashedPassword: { type: String, required: true },
     isActive: { type: Boolean, default: false },
     wallet: { type: Number, default: 0 },
     image: { type: String },
-    address: { type: String },
-    role: { type: String, default: Roles.SALLER },
+    tajribasiHaqida: { type: String, default: Roles.EGA },
 }, {
     timestamps: true,
     versionKey: false,
     virtuals: true,
-    toObject: {
-        virtuals: true
-    },
-    toJSON: {
-        virtuals: true
-    }
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true }
 });
 
-SallerSchema.virtual('products', {
-    ref: 'Product',
+EgaSchema.virtual('kurslar', {
+    ref: 'Kurslar',
     localField: '_id',
-    foreignField: 'saller'
+    foreignField: 'ega_id'
 });
 
-const Saller = model('Saller', SallerSchema);
-export default Saller;
+const Ega = model('Ega', EgaSchema);
+export default Ega;
