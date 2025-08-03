@@ -15,12 +15,14 @@ class KurslarController extends BaseController {
             const { ega_id, category_id } = req.body;
             await BaseController.checkById(Ega, ega_id);
             await BaseController.checkById(Category, category_id);
-            const kurs = await Kurslar.create(req.body);
+            const kurs = await Kurslar.create({...req.body,image:req?.file?.filename});
             successRes(res, kurs, 201);
         } catch (error) {
+            console.log(error)
             next(error)
         }
     }
+
 
 
 }

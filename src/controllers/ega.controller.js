@@ -1,37 +1,41 @@
 import { BaseController } from "./base.controller.js";
-import { AppError } from "../error/AppError.js"; 
+import { AppError } from "../error/AppError.js";
 import crypto from '../utils/Crypto.js';
-import {successRes} from '../utils/success-res.js';
+import { successRes } from '../utils/success-res.js';
 import token from '../utils/Token.js';
 import configEnv from '../config/index.js';
 import Ega from "../models/ega.model.js";
+import {generateOtp } from '../utils/generate-otp.js';
+import {sendOtpToMali} from '../utils/send-mail.js';
+import Redis from "../utils/Redis.js";
+import config from '../config/index.js';
 
-class EgaController extends BaseController{
-    constructor(){
-        super(Ega,["kurslar"])
+class EgaController extends BaseController {
+    constructor() {
+        super(Ega, ["kurslar"])
     }
 
-    async createEga(req,res,next){
+    async createEga(req, res, next) {
         try {
-            const {userName,email,password}=req.body;
-            const exsistEmail=await Ega.findOne({email});
-            if(exsistEmail){
-                throw new AppError("email already exsist",409)
+            const { userName, email, password } = req.body;
+            const exsistEmail = await Ega.findOne({ email });
+            if (exsistEmail) {
+                throw new AppError("email already exsist", 409)
             }
-            const exsistUserName=await Ega.findOne({userName});
-            if(exsistUserName){
-                throw new AppError("phoneNumber already exsist",409);
+            const exsistUserName = await Ega.findOne({ userName });
+            if (exsistUserName) {
+                throw new AppError("phoneNumber already exsist", 409);
             }
-            const hashedPassword=await crypto.encrypt(password);
+            const hashedPassword = await crypto.encrypt(password);
             delete req.body.password;
-        
-            const newEga=await Ega.create({
+
+            const newEga = await Ega.create({
                 ...req.body,
                 hashedPassword,
-                image:req?.file?.filename??""
+                image: req?.file?.filename ?? ""
             });
 
-            return successRes(res,newEga,201)
+            return successRes(res, newEga, 201)
         } catch (error) {
             next(error)
         }
@@ -39,8 +43,8 @@ class EgaController extends BaseController{
 
     async singIn(req, res, next) {
         try {
-            const { password,userName } = req.body;
-            const ega = await Ega.findOne({userName });
+            const { password, userName } = req.body;
+            const ega = await Ega.findOne({ userName });
 
             const ismatchPassword = await crypto.decrypt(password, ega?.hashedPassword ?? '');
             if (!ismatchPassword) {
@@ -93,7 +97,7 @@ class EgaController extends BaseController{
             next(error)
         }
     }
-    
+
 
     async singOut(req, res, next) {
         try {
@@ -118,6 +122,113 @@ class EgaController extends BaseController{
             next(error)
         };
     };
+
+    async updateEga(req, res, next) {
+        try {
+            const id = req.params.id;
+            const ega = await BaseController.checkById(Ega, id);
+            const { userName, password, email } = req.body;
+            if (userName) {
+                const exsist = await Ega.findOne({ userName });
+                if (exsist) {
+                    throw new AppError("userName arlery exsist", 409)
+                }
+            }
+
+            if (email) {
+                const exsist = await Ega.findOne({ email });
+                if (exsist) {
+                    throw new AppError("email arlery exsist", 409)
+                }
+            }
+
+            let hashedPassword=ega.hashedPassword;
+            if(password){
+                if(req?.user.role!=ega.role){
+                    throw new AppError("not access chenge for admin or ega",403)
+                }
+                hashedPassword=await crypto.encrypt(password);
+                delete req.body.password
+            };
+            const updateEga=await Ega.findByIdAndUpdate(id,{...req.body,hashedPassword},{new:true});
+            return successRes(res,updateEga)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async updatePasswordEga(req, res, next) {
+        try {
+            const id = req.params.id;
+            const { oldPassword, newPassword } = req.body;
+            const ega = await BaseController.checkById(Ega, id);
+            const isMatedPassword = await crypto.decrypt(oldPassword, ega.hashedPassword)
+            if (!isMatedPassword) {
+                throw new AppError("incorect old password", 400)
+            }
+            const hashedPassword = await crypto.encrypt(newPassword);
+            const updatePassword = await Ega.findByIdAndUpdate(id, { hashedPassword }, { new: true });
+            return successRes(res, updatePassword)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async forgetPassword(req,res,next){
+        try {
+            const {email}=req.body;
+            const ega=await Ega.findOne({email})
+            if(!ega){
+                throw new AppError("email not found")
+            }
+            const otp=generateOtp();
+            sendOtpToMali(email,otp);
+            Redis.setData(email,otp);
+            return successRes(
+                res,{
+                    email,otp,
+                    expireOtp:'5minut'
+                }
+            )
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async confirmOtp(req,res,next){
+        try {
+            const {email,otp}=req.body;
+            const checkOtp=await Redis.getData(email)
+            if(otp!=checkOtp){
+                throw new AppError("otp notogri",400)
+            }
+            await Redis.deleteData(email);
+            return successRes(res,{
+                confirmPasswordOtp:config.CONFIRM_PASSWORD_URL,
+                reqMethod:"PATCH",
+                email
+            })
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async confirmPassword(req,res,next){
+        try {
+            const {email,newPassword}=req.body;
+            const ega=await Ega.findOne({email});
+            if(!ega){
+                throw new AppError("bunday foydalanuchi topilmadi",404)
+            }
+
+            const hashedPassword=await crypto.encrypt(newPassword);
+            const updatePassword=await Ega.findByIdAndUpdate(ega._id,{hashedPassword},{new:true});
+            return successRes(res,updatePassword);
+        } catch (error) {
+            next(error)
+        }
+    }
+
 
 
 }

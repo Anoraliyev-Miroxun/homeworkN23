@@ -22,7 +22,6 @@ class AdminController extends BaseController {
             if (exsistUsername) {
                 throw new AppError("username arley exsist", 409);
             };
-            console.log('nima gap')
             const exsistEmail = await Admin.findOne({ email })
             if (exsistEmail) {
                 throw new AppError("emali address arley exsist", 409);
@@ -208,7 +207,6 @@ class AdminController extends BaseController {
 
     async confirmOtp(req, res, next) {
         try {
-            console.log("jk;lasdlkfja;sldkfj;lasjdlfkajl;ksdjf[ajsd;lkfja;sjdfd")
             const { email, otp } =req.body;
             const checkOtp=await Redis.getData(email)
             if(String(checkOtp)!==String(otp)){
@@ -236,7 +234,6 @@ class AdminController extends BaseController {
             const updateAdmin=await Admin.findByIdAndUpdate(admin._id,{hashedPassword},{new:true});
             return successRes(res,updateAdmin);
         } catch (error) {
-            console.log(error)
             next(error)
         }
     }

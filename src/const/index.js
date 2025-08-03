@@ -3,3 +3,5 @@ export const Roles = {
     ADMIN: 'ADMIN',
     EGA: 'KURS-EGASI'
 };
+
+export * from "./file.constant.js";

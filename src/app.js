@@ -10,7 +10,7 @@ import connectDb from './db/index.js';
 import { globalErrorHandle } from './error/global-error-handle.js';
 import logger from './helpers/log/logger.js';
 import expressWinston from 'express-winston';
-import {errorPage} from './error/page-not-found.error.js';
+import { errorPage } from './error/page-not-found.error.js';
 
 export async function application(app) {
 
@@ -24,7 +24,7 @@ export async function application(app) {
 
     app.use(cookieParser())
 
-    app.use("/uploads", express.static(join(process.cwd(), "./uploads")))
+    app.use("/api/kursvideo", express.static(join(process.cwd(), "uploads")))
 
     await connectDb();
 

@@ -1,18 +1,18 @@
 import connectDb from '../db/index.js';
 import Admin from '../models/admin.model.js';
 import crypto from '../utils/Crypto.js';
-import configEnv from '../config/config.env.js';
+import configEnv from '../config/index.js';
 import { disconnect } from 'mongoose';
 
 
 (async function(){
     try {
         await connectDb();
-        const hashedPassword=await crypto.encrypt(configEnv.SUPERADMIN_PASSWORD);
+        const hashedPassword=await crypto.encrypt(configEnv.Admin.SUPERADMIN_PASSWORD);
         await Admin.create({
-            username:configEnv.SUPERADMIN_USERNAME,
+            username:configEnv.Admin.SUPERADMIN_USERNAME,
             hashedPassword,
-            email:configEnv.SUPERADMIN_EMAIL,
+            email:configEnv.Admin.SUPERADMIN_EMAIL,
             role:"SUPERADMIN"
         })
 

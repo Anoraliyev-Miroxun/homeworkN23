@@ -1,6 +1,7 @@
 import { isValidObjectId } from 'mongoose';
 import { successRes } from '../utils/success-res.js';
 import { AppError } from '../error/AppError.js';
+import Kurslar from '../models/kurslar.model.js';
 
 
 export class BaseController {
@@ -27,9 +28,7 @@ export class BaseController {
             if(fields?.length){
                 fields.forEach(field=>query.populate(field))
             }
-            console.log("JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ")
             const data=await query.exec();
-            console.log("sssssssssssssssssssssssssss")
             return successRes(res, data)
         } catch (error) {
             next(error)
@@ -69,8 +68,8 @@ export class BaseController {
     delete = async (req, res, next) => {
         try {
             const id = req.params.id;
-            await BaseController.checkById(this.model,id)
-            const dataa = await this.model.findById(id);
+            await BaseController.checkById(Kurslar,id)
+            const dataa = await Kurslar.findById(id);
             if (!dataa) {
                 throw new AppError("not found", 404);
 
@@ -78,6 +77,7 @@ export class BaseController {
             await this.model.findByIdAndDelete(id);
             return successRes(res, {})
         } catch (error) {
+            console.log(error)
             next(error)
         }
     }

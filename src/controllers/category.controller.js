@@ -21,7 +21,6 @@ class CategoryController extends BaseController {
                 name,
                 image:req?.file?.filename?? ""
             });
-
             successRes(res, category, 201);
         } catch (error) {
             next(error)
