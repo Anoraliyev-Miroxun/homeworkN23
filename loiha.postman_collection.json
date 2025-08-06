@@ -1,0 +1,1219 @@
+{
+	"info": {
+		"_postman_id": "c9363890-0e48-4746-beb5-389210f10d7c",
+		"name": "loiha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-c9363890-0e48-4746-beb5-389210f10d7c?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "mijoz",
+			"item": [
+				{
+					"name": "create mijoz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"fazzlidin\",\n    \"fullName\":\"abdurahimov fazzlidin\",\n    \"password\":\"Fazzlidin123!\",\n    \"email\":\"fazliddin.abdurahimov9602@gamil.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"fazzlidin\",\n    \"password\":\"Fazzlidin123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"fazzlidin\",\n    \"fullName\":\"abdurahimov fazzlidin\",\n    \"password\":\"Fazzlidin123!\",\n    \"email\":\"fazliddin.abdurahimov9602@gamil.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"fazzlidin\",\n    \"fullName\":\"abdurahimov fazzlidin\",\n    \"password\":\"Fazzlidin123!\",\n    \"email\":\"fazliddin.abdurahimov9602@gamil.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/688f6105e275678a2992fd12",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								"688f6105e275678a2992fd12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getId Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"adhamjon\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/update/688f6105e275678a2992fd12",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								"update",
+								"688f6105e275678a2992fd12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPassword\":\"Fazzlidin123!1\",\n    \"oldPassword\":\"Fazzlidin123!\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/password/688f6105e275678a2992fd12",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								"password",
+								"688f6105e275678a2992fd12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password update Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"miroxunanaraliyev@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/mijoz/forget-password",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"mijoz",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":\"688f6105e275678a2992fd12\",\n    \"kurs_id\":\"688f5e2d11a2ffedec854013\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/order",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":\"688f6105e275678a2992fd12\",\n    \"kurs_id\":\"688f5e2d11a2ffedec854013\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/order",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":\"688f6105e275678a2992fd12\",\n    \"kurs_id\":\"688f5e2d11a2ffedec854013\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/order/688f6848835789f9be70987f",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"order",
+								"688f6848835789f9be70987f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Id Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":\"688f6105e275678a2992fd12\",\n    \"kurs_id\":\"688f5e2d11a2ffedec854013\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/order/delete/688f6848835789f9be70987f",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"order",
+								"delete",
+								"688f6848835789f9be70987f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ega",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"Javohir\",\n    \"fullName\":\"Javohir Quronboyev\",\n    \"password\":\"Javohir123!\",\n    \"email\":\"miroxunanaraliyev@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/ega",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"ega"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Javohirbek\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/ega/update/688f4f2eacf1f2d682fca9c3",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"ega",
+								"update",
+								"688f4f2eacf1f2d682fca9c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\":\"Javohir123!\",\n    \"newPassword\":\"Javohir123!1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/ega/password/688f4f2eacf1f2d682fca9c3",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"ega",
+								"password",
+								"688f4f2eacf1f2d682fca9c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kurs",
+			"item": [
+				{
+					"name": "create kurs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"FullStack\",\n    \"price\":234,\n    \"quantity\":34,\n    \"description\":\"Zo'r kurs\",\n    \"ega_id\":\"688f4f2eacf1f2d682fca9c3\",\n    \"category_id\":\"688f4db6acf1f2d682fca9b7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/kurs",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"kurs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get kurs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1111/api/kurs/",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"kurs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get kursId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1111/api/kurs/688f599c52c5fd1a9703e4b9",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"kurs",
+								"688f599c52c5fd1a9703e4b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"FullStack full\",\n    \"price\":234,\n    \"quantity\":34,\n    \"description\":\"Zo'r kurs\",\n    \"ega_id\":\"688f4f2eacf1f2d682fca9c3\",\n    \"category_id\":\"688f4db6acf1f2d682fca9b7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/kurs/update/688f5b7111a2ffedec854008",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"kurs",
+								"update",
+								"688f5b7111a2ffedec854008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"FullStack full\",\n    \"price\":234,\n    \"quantity\":34,\n    \"description\":\"Zo'r kurs\",\n    \"ega_id\":\"688f4f2eacf1f2d682fca9c3\",\n    \"category_id\":\"688f4db6acf1f2d682fca9b7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/kurs/delete/688f5e2d11a2ffedec854013",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"kurs",
+								"delete",
+								"688f5e2d11a2ffedec854013"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"dizayn\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/category",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"dizayn\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/category/688f4d94ef556268416b416a",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"category",
+								"688f4d94ef556268416b416a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0OGEyMDJlMzUxZTA3YjhmZjVkYSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQyMjE3MjEsImV4cCI6MTc1NDMwODEyMX0.ZU-qxpYvgz77KcBTlh2bc9lnkPUTYrBOsiyFyXrptXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"fullStack\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/category/patch/688f4d94ef556268416b416a",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"category",
+								"patch",
+								"688f4d94ef556268416b416a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kurs video",
+			"item": [
+				{
+					"name": "create video kurs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "singin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Eshmat\",\n    \"password\": \"Eshmat123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"doniyor\",\n    \"email\":\"doniyor@gmail.com\",\n    \"password\":\"Doniyor123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "genert token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/token",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"miroxunanaraliyev@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/forget-password",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm otp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"miroxunanaraliyev@gmail.com\",\n    \"otp\":\"373702\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/confirm-otp",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"confirm-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"miroxunanaraliyev@gmail.com\",\n    \"newPassword\":\"Mirxoun123!1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/confirm-password",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"confirm-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/688f48a202e351e07b8ff5da",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"688f48a202e351e07b8ff5da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ozgartrish password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\":\"Mirxoun123!1\",\n    \"newPassword\":\"Mirxoun123!2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/password/688f48a202e351e07b8ff5da",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"password",
+								"688f48a202e351e07b8ff5da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
