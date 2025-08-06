@@ -36,3 +36,8 @@ export default new DeviceInfo();
 // git init && git remote add origin <remote-repo-url> && 
 // git remote -v && git add . && git commit -m 'matn' && 
 // git checkout -b 'branch-nomi' && git push -u origin 'branch-nomi'
+
+
+
+// git commit -m "commit yoz"
+// git push origin <branch-nomi>

@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "325f0b5c-e48d-4322-9e33-4b77129e3a5e",
+		"name": "15-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-325f0b5c-e48d-4322-9e33-4b77129e3a5e?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "get category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"Javohir\",\n    \"password\":\"Javohir123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111/api/ega/singin",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"ega",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
