@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "177ce1d0-649b-4055-aff7-551b30efd958",
+		"name": "14-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-177ce1d0-649b-4055-aff7-551b30efd958?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\":\"doniyorbek\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2222/postgres/patch/users/3",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"postgres",
+						"patch",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY0NDJjNTNmYTIzYzRkZTQ4ODE2MyIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDIxOTc1OCwiZXhwIjoxNzU0MzA2MTU4fQ.BXTY5aaavgb-7mz8dmoLz33xvReFqamjhZNcPjEro18",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\":\"QUVONCH\",\n   \"email\":\"QUVONCH@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2222/postgres/users",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"postgres",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join left",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2222/postgres/get",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"postgres",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:2222/postgres/delete/users/8",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"postgres",
+						"delete",
+						"users",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2222/postgres/users",
+					"host": [
+						"localhost"
+					],
+					"port": "2222",
+					"path": [
+						"postgres",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
