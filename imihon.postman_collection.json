@@ -1,0 +1,2039 @@
+{
+	"info": {
+		"_postman_id": "2ce7725d-8f8d-4414-9c87-d72987ef337e",
+		"name": "imihon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-2ce7725d-8f8d-4414-9c87-d72987ef337e?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "singin superadmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5M2RlNDA2N2ViNDE3Y2ViYmYxOSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjMzMjY2LCJleHAiOjE3NTQ3MTk2NjZ9.HsZXYenH12dJTUK9B7w57CY6FPF7xcgRlN60_Wdww44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"Eshmat\",\n    \"password\":\"Eshmat123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create damin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDYzNTQ0MCwiZXhwIjoxNzU0NzIxODQwfQ.H8sXccC4xDNCAQYc6BxVDC_S5wddk2O6OD4r0PIsJoQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"Fazzlidin\",\n    \"password\": \"Fazzlidin123!\",\n    \"phoneNumber\":\"+998900322083\",\n    \"role\":\"ADMIN\",\n    \"fullName\":\"Nurdillayev Fazzlidi\",\n    \"email\":\"fazliddin.abdurahimov9602@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "genretetoken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDYzMDI3MCwiZXhwIjoxNzU0NzE2NjcwfQ.gu32M1phSW7MQboN22UB5idfOl8pWtCJ7M0tAjJvsBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Doniyor\",\n    \"password\": \"Doniyor123!\",\n    \"phoneNumber\":\"+998900322080\",\n    \"role\":\"ADMIN\",\n    \"fullName\":\"Nurdillayev Doniyor\",\n    \"email\":\"doniyor@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5M2RlNDA2N2ViNDE3Y2ViYmYxOSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjMzMjY2LCJleHAiOjE3NTQ3MTk2NjZ9.HsZXYenH12dJTUK9B7w57CY6FPF7xcgRlN60_Wdww44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"oldPassword\":\"Doniyor123!\",\n  \"newPassword\":\"Doniyor123!1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1111/api/admin/password/689593de4067eb417cebbf19",
+							"host": [
+								"localhost"
+							],
+							"port": "1111",
+							"path": [
+								"api",
+								"admin",
+								"password",
+								"689593de4067eb417cebbf19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5M2RlNDA2N2ViNDE3Y2ViYmYxOSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjMzMjY2LCJleHAiOjE3NTQ3MTk2NjZ9.HsZXYenH12dJTUK9B7w57CY6FPF7xcgRlN60_Wdww44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"miroxunanaraliyev@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin/forget-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-otp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5M2RlNDA2N2ViNDE3Y2ViYmYxOSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjMzMjY2LCJleHAiOjE3NTQ3MTk2NjZ9.HsZXYenH12dJTUK9B7w57CY6FPF7xcgRlN60_Wdww44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"miroxunanaraliyev@gmail.com\",\n  \"otp\": \"739438\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin/confirmotp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"confirmotp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5M2RlNDA2N2ViNDE3Y2ViYmYxOSIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjMzMjY2LCJleHAiOjE3NTQ3MTk2NjZ9.HsZXYenH12dJTUK9B7w57CY6FPF7xcgRlN60_Wdww44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"miroxunanaraliyev@gmail.com\",\n  \"newPassword\":\"Doniyor123!2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin/confirm-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"confirm-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDYzMDI3MCwiZXhwIjoxNzU0NzE2NjcwfQ.gu32M1phSW7MQboN22UB5idfOl8pWtCJ7M0tAjJvsBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Doniyor\",\n    \"password\": \"Doniyor123!\",\n    \"phoneNumber\":\"+998900322080\",\n    \"role\":\"ADMIN\",\n    \"fullName\":\"Nurdillayev Doniyor\",\n    \"email\":\"doniyor@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDYzMDI3MCwiZXhwIjoxNzU0NzE2NjcwfQ.gu32M1phSW7MQboN22UB5idfOl8pWtCJ7M0tAjJvsBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Doniyor\",\n    \"password\": \"Doniyor123!\",\n    \"phoneNumber\":\"+998900322080\",\n    \"role\":\"ADMIN\",\n    \"fullName\":\"Nurdillayev Doniyor\",\n    \"email\":\"doniyor@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/api/admin/689588416951f69787610af6",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"admin",
+								"689588416951f69787610af6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller",
+			"item": [
+				{
+					"name": "create saller",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\",\n    \"phoneNumber\":\"+998900322086\",\n    \"role\":\"SOTUVCHI\",\n    \"fullName\":\"Nurdillayev Ozod\",\n    \"email\":\"abbosovich1999@gmali.com\",\n    \"isActive\":true,\n    \"address\":\"Toshkent\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVkMGZmOTliNGNjOTU4ZGE3MGQ1NiIsInJvbGUiOiJTT1RVVkNISSIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQ2NDg5NDQsImV4cCI6MTc1NDczNTM0NH0.o1ZaSrnG7D6ffCEm4IKFj0G1OeXaORt3TwzXtefJifM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller/6895d0ff99b4cc958da70d56",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller",
+								"6895d0ff99b4cc958da70d56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVkMGZmOTliNGNjOTU4ZGE3MGQ1NiIsInJvbGUiOiJTT1RVVkNISSIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NTQ2NDk2NDcsImV4cCI6MTc1NDczNjA0N30.NZV1lkqtT0nk0BXLq4duOH5ojoEPItsfAIIyHNpXur8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Ozod\",\n    \"password\": \"Ozod123!\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/saller/singout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"saller",
+								"singout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mijoz",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDYzMDI3MCwiZXhwIjoxNzU0NzE2NjcwfQ.gu32M1phSW7MQboN22UB5idfOl8pWtCJ7M0tAjJvsBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Holmir\",\n    \"password\": \"Holmir123!\",\n    \"phoneNumber\":\"+998900322084\",\n    \"role\":\"MIJOZ\",\n    \"fullName\":\"Nurdillayev Holmir\",\n    \"email\":\"abossovich1999@gmali.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjU1MjY3LCJleHAiOjE3NTQ3NDE2Njd9.RueKotCTiofr9dTb8SjW6usFZupem8LIayOjC6c12Gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Holmir\",\n    \"password\": \"Holmir123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQwNDE4LCJleHAiOjE3NTQ3MjY4MTh9.XSSFOJ7ZOkfe-A2SA1iriqwEbL3c1O0NmV2U6CnWVmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Holmir\",\n    \"password\": \"Holmir123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Holmir\",\n    \"password\": \"Holmir123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"Holmir\",\n    \"password\": \"Holmir123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/6895afceb87a88a6e83df737",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"6895afceb87a88a6e83df737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"Holmir123!\",\n    \"newPassword\": \"Holmir123!1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/password/6895afceb87a88a6e83df737",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"password",
+								"6895afceb87a88a6e83df737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"Holmir123!\",\n    \"newPassword\": \"Holmir123!1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/password/6895afceb87a88a6e83df737",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"password",
+								"6895afceb87a88a6e83df737"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-otp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"abossovich1999@gmail.com\",\n    \"otp\": \"774357\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/confirm-otp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"confirm-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-otp Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"abossovich1999@gmali.com\",\n    \"newPassword\": \"Holmir123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/confirm-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"confirm-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjM5NjYxLCJleHAiOjE3NTQ3MjYwNjF9.Au_bsNE8sky6pNBHO_n6C5C_2N0yjanUq0AiRf14o1o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\":\"Ibrohimov Holmurod\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/mijoz/6895afceb87a88a6e83df737",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"mijoz",
+								"6895afceb87a88a6e83df737"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tehnika\",\n    \"image\": \"zortehnikaekan.jpg\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lolalar\",\n    \"image\": \"zortehnikaekan.jpg\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/patch/6895d54eb57963721b939735",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"patch",
+								"6895d54eb57963721b939735"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tehnika\",\n    \"image\": \"zortehnikaekan.jpg\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tehnika\",\n    \"image\": \"zortehnikaekan.jpg\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/6895d54eb57963721b939735",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"6895d54eb57963721b939735"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByid Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tehnika\",\n    \"image\": \"zortehnikaekan.jpg\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/delete/6895d54eb57963721b939735",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"delete",
+								"6895d54eb57963721b939735"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"oqlola\" ,\n    \"price\":1222,\n    \"quantity\":30,\n    \"description\":\"bu gul yerga ekiladi\",\n    \"saller_id\":\"6895d0ff99b4cc958da70d56\",\n    \"category_id\":\"6895d8c2fceda3ccb54a1352\"\n}\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/6895d8f21714877a184cc78b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"6895d8f21714877a184cc78b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"sariqlola\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/update/6895d8f21714877a184cc78b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"6895d8f21714877a184cc78b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"sariqlola\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/delete/6895d8f21714877a184cc78b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"6895d8f21714877a184cc78b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "createorder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"approved\",\n    \"soni\":1,\n    \"mijoz_id\":\"6895afceb87a88a6e83df737\",\n    \"product_id\":\"6895fce0a08a922876dc7faf\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/order/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createorder Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"approved\",\n    \"soni\":4,\n    \"mijoz_id\":\"6895afceb87a88a6e83df737\",\n    \"product_id\":\"6895db2d47d03882a6e9e933\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/order/6895f40c4493b76ff9b46fa7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"6895f40c4493b76ff9b46fa7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createorder Copy 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"approved\",\n    \"soni\":4,\n    \"mijoz_id\":\"6895afceb87a88a6e83df737\",\n    \"product_id\":\"6895db2d47d03882a6e9e933\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/order",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n    \"soni\":10\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/order/update/6895f40c4493b76ff9b46fa7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"update",
+								"6895f40c4493b76ff9b46fa7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n    \"soni\":10\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/order/delete/6895f40c4493b76ff9b46fa7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"delete",
+								"6895f40c4493b76ff9b46fa7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hamyon",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_number\":\"222222222222222\",\n    \"hisob\":100000,\n    \"user_id\":\"6895afceb87a88a6e83df737\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hamyon/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hamyon",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1NDcyMiwiZXhwIjoxNzU0NzQxMTIyfQ.8BRwUjx8P6r7M9o9lMjL0WiqhWHTiGOxjxdN1XGJqJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_number\":\"1111111111111111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hamyon/patch/6895de7810aff8df38b56de9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hamyon",
+								"patch",
+								"6895de7810aff8df38b56de9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1MzMyOCwiZXhwIjoxNzU0NzM5NzI4fQ.AkxnpuuZJiFIyhz-SilAm_-u-ndCif54BsnQQ3q1CYA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card_number\":\"1234567812345678\",\n    \"hisob\":100000,\n    \"user_id\":\"6895afceb87a88a6e83df737\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hamyon/6895de7810aff8df38b56de9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hamyon",
+								"6895de7810aff8df38b56de9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU5Y2QxNWYyMTQ4NmY5YjQ5NDhkYyIsInJvbGUiOiJBRE1JTiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjQ5ODk0LCJleHAiOjE3NTQ3MzYyOTR9.AgRqJvr57vB9JNdd5NZNexSMudiXLbKmwvP3ZeGmDP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hamyon",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hamyon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1NDcyMiwiZXhwIjoxNzU0NzQxMTIyfQ.8BRwUjx8P6r7M9o9lMjL0WiqhWHTiGOxjxdN1XGJqJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hamyon/delete/6895de7810aff8df38b56de9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hamyon",
+								"delete",
+								"6895de7810aff8df38b56de9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dastafka",
+			"item": [
+				{
+					"name": "createdastafka",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjU1MjY3LCJleHAiOjE3NTQ3NDE2Njd9.RueKotCTiofr9dTb8SjW6usFZupem8LIayOjC6c12Gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\":\"Toshkent\",\n    \"order_id\":\"6895fd73a08a922876dc7fc4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/dastafka",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dastafka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createdastafka Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1OTgxNCwiZXhwIjoxNzU0NzQ2MjE0fQ.kw0ycoJT_pcOktsU27bZviucB0Ms0LiHjTONbp0B9dE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\":\"Toshkent\",\n    \"order_id\":\"6895fd73a08a922876dc7fc4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/dastafka/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dastafka",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1OTgxNCwiZXhwIjoxNzU0NzQ2MjE0fQ.kw0ycoJT_pcOktsU27bZviucB0Ms0LiHjTONbp0B9dE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\":\"Toshkent\",\n    \"order_id\":\"6895fd73a08a922876dc7fc4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/dastafka/6895fd89a08a922876dc7fc7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dastafka",
+								"6895fd89a08a922876dc7fc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dastafka",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1OTgxNCwiZXhwIjoxNzU0NzQ2MjE0fQ.kw0ycoJT_pcOktsU27bZviucB0Ms0LiHjTONbp0B9dE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\":\"Toshkent\",\n    \"order_id\":\"6895fd73a08a922876dc7fc4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/dastafka/6895fd89a08a922876dc7fc7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dastafka",
+								"6895fd89a08a922876dc7fc7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "create imagae",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTU4ODQxNjk1MWY2OTc4NzYxMGFmNiIsInJvbGUiOiJTVVBFUkFETUlOIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc1NDY1OTgxNCwiZXhwIjoxNzU0NzQ2MjE0fQ.kw0ycoJT_pcOktsU27bZviucB0Ms0LiHjTONbp0B9dE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "6895fce0a08a922876dc7faf",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f06f8e9-a740-47e0-a7c6-f34b2ef30505",
+										"postman-cloud:///1f06f8e9-a6fc-4220-91dc-1ef84dc764e4",
+										"postman-cloud:///1f06f8e9-a705-4e60-94f5-5aae27ee7e10",
+										"/home/miroxun/Downloads/Telegram Desktop/video_2025-07-26_16-49-59.mp4"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/image",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
