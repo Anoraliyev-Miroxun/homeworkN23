@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "18668866-470f-49fa-b632-453b56623bcb",
+		"name": "19-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-18668866-470f-49fa-b632-453b56623bcb?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"harbiy_texnika\",\n    \"mahsulot_soni\":8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/category",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"dazmol\",\n    \"soni\":8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/mahsulotlar ",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"mahsulotlar "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maishi_texnika\",\n    \"mahsulot_soni\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/category",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getall product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maishi_texnika\",\n    \"mahsulot_soni\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/mahsulotlar ",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"mahsulotlar "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maishi_texnika\",\n    \"mahsulot_soni\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/category/6",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"category",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "byid product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maishi_texnika\",\n    \"mahsulot_soni\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/mahsulotlar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"mahsulotlar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"UY-TEHNIKA\",\n    \"mahsulot_soni\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/category/6",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"category",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"olma\",\n    \"soni\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/mahsulotlar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"mahsulotlar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"UY-TEHNIKA\",\n    \"mahsulot_soni\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/category/8",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"category",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTVhZmNlYjg3YTg4YTZlODNkZjczNyIsInJvbGUiOiJNSUpPWiIsImlzQWN0aXZlIjpmYWxzZSwiaWF0IjoxNzU0NjUxNzM5LCJleHAiOjE3NTQ3MzgxMzl9.bjjMvcl7bv9MIk1ihe_odKQRx3eaIcdb6TAp390fEVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"UY-TEHNIKA\",\n    \"mahsulot_soni\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/mahsulotlar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"mahsulotlar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
