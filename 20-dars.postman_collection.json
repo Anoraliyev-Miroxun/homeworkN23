@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "39737ad7-11d1-442b-afb5-7153a80ee5fb",
+		"name": "20-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-39737ad7-11d1-442b-afb5-7153a80ee5fb?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "saller",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"rozibek\",\n    \"age\":36\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Saller",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Saller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"rozibek\",\n    \"age\":23\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Saller/1",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Saller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"rozibek\",\n    \"age\":23\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Saller/1",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Saller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"sobir\",\n    \"age\":36\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Saller",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Saller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"sobir\",\n    \"age\":36\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Saller/2",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Saller",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"behi\",\n    \"soni\":36,\n    \"narxi\":2000,\n    \"saller_id\":3\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Product",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"behi\",\n    \"soni\":36,\n    \"narxi\":2000,\n    \"saller_id\":3\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Product",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getall Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"behi\",\n    \"soni\":36,\n    \"narxi\":2000,\n    \"saller_id\":3\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":3,\n    \"mahsulot_soni\":36000,\n    \"product_id\":3\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Order",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mijoz_id\":3,\n    \"mahsulot_soni\":36000,\n    \"product_id\":3\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/market/Order",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"market",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"zohidbek\",\n    \"age\":22\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/Mijoz",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"Mijoz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update mijoz",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"bunyodbek\",\n    \"age\":19\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/Mijoz/2",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"Mijoz",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete mijoz",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"bunyodbek\",\n    \"age\":19\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/Mijoz/2",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"Mijoz",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"olma\",\n    \"soni\":4,\n    \"narxi\":2000\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/Mijoz",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"Mijoz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getbyid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"olma\",\n    \"soni\":4,\n    \"narxi\":2000\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/market/Mijoz/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"market",
+						"Mijoz",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
