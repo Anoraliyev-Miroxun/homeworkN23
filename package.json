@@ -1,0 +1,15 @@
+
+{
+  "name": "3-dtypescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "com":"tsc",
+    "start": "node ./dist/1-masala.js",
+    "dev":"ts-node ./1-masala.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
