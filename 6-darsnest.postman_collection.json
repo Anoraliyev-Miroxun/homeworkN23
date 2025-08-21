@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "ed85d011-f745-4f15-b5aa-2615932ec500",
+		"name": "6-darsnest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "46140090",
+		"_collection_link": "https://miroxun.postman.co/workspace/Miroxun's-Workspace~d6a0c63f-7973-4a28-8a6a-c4567ebca802/collection/46140090-ed85d011-f745-4f15-b5aa-2615932ec500?action=share&source=collection_link&creator=46140090"
+	},
+	"item": [
+		{
+			"name": "6-darsnest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"name\":\"toshmat\",\n    \"age\":23\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/users"
+			},
+			"response": []
+		}
+	]
+}
