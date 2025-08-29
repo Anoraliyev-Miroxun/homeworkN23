@@ -22,8 +22,8 @@ export class CreateProductDto {
 
   @ApiProperty()
   @IsArray()
-  @IsInt({ each: true })   // array ichidagi har bir qiymat int bo‘lishi shart
-  @IsOptional()            // product yaratishda orderIds majburiy bo‘lmasligi mumkin
+  @IsInt({ each: true })   
+  @IsOptional()            
   orderIds?: number[];
 }
 
@@ -32,3 +32,7 @@ export class CreateProductDto {
 // git init && git remote add origin <remote-repo-url> &&
 //  git remote -v && git add . && git commit -m 'matn' &&
 //   git checkout -b 'branch-nomi' && git push -u origin 'branch-nomi'
+
+// git add . 
+// git commit -m "commit yoz"
+// git push origin <branch-nomi>
