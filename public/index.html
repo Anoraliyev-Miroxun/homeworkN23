@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini App - Chat & Notification</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <style>
+  body {
+    background-color: #f0f4ff; 
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  h2 {
+    margin-top: 20px;
+    color: #34495e;
+  }
+
+  input, button {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    background: #ecf0f1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+</style>
+
+</head>
+
+<body>
+
+  <body>
+  <div class="container">
+    <h1>Mini App</h1>
+
+    <!-- Chat qismi -->
+    <div>
+      <h2>Chat</h2>
+      <input id="sender" placeholder="Sender" />
+      <input id="text" placeholder="Message" />
+      <button onclick="sendMessage()">Send</button>
+      <ul id="messages"></ul>
+    </div>
+
+    <!-- Notification qismi -->
+    <div>
+      <h2>Notification</h2>
+      <input id="title" placeholder="Title" />
+      <input id="body" placeholder="Body" />
+      <button onclick="sendNotification()">Send Notif</button>
+      <ul id="notifs"></ul>
+    </div>
+  </div>
+</body>
+
+  <script>
+    const socket = io("http://localhost:3000");
+
+    // const socket = io(window.location.origin);
+
+    // Chat
+    function sendMessage() {
+      const sender = document.getElementById("sender").value;
+      const text = document.getElementById("text").value;
+      socket.emit("send_message", { sender, text });
+    }
+
+    socket.on("receive_message", (msg) => {
+      const li = document.createElement("li");
+      li.innerText = `${msg.sender}: ${msg.text}`;
+      document.getElementById("messages").appendChild(li);
+    });
+
+    // Notifications
+    function sendNotification() {
+      const title = document.getElementById("title").value;
+      const body = document.getElementById("body").value;
+      socket.emit("send_notification", { title, body });
+    }
+
+    socket.on("receive_notification", (notif) => {
+      const li = document.createElement("li");
+      li.innerText = `${notif.title} - ${notif.body}`;
+      document.getElementById("notifs").appendChild(li);
+    });
+  </script>
+</body>
+</html>
