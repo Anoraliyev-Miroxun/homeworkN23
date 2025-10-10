@@ -7,6 +7,8 @@ import { UpdateStoreDto } from './dto/update-store.dto';
 export class StoreController {
   constructor(private readonly storeService: StoreService) {}
 
+
+  
   @Post()
   create(@Body() createStoreDto: CreateStoreDto) {
     return this.storeService.create(createStoreDto);
