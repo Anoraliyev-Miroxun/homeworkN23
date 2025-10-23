@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +16,21 @@ ol {
     list-style: none;
 }
 
+.b {
+    border: 1px solid red;
+}
+
+body {
+    color: #7d7d7d;
+    font-family: "Mulish", sans-serif;
+}
+
 .conteyner {
-    display: flex;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1240px;
+    padding: 5px;
 }
 
 .header__list {
@@ -34,4 +46,230 @@ ol {
     border-radius: 2px;
     width: 23px;
     height: 3px;
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student__blok {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student {
+    padding: 124px;
+}
+
+.student__title {
+    font-weight: 900;
+    font-size: 56px;
+    color: #2f2f2f;
+    width: 500px;
+}
+
+.student__text {
+    width: 632px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 173%;
+}
+
+.student__btn {
+    border: 1px solid blueviolet;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 182%;
+    padding: 15px 50px;
+    background-color: blueviolet;
+    color: white;
+    display: inline-block;
+}
+
+.icon1 {
+    color: black;
+    margin-left: 20px;
+}
+
+.student__list {
+    display: flex;
+    margin-top: 100px;
+    gap: 15px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.brand {
+    background-color: #7d7d7d;
+}
+
+.brand__title {
+    margin-top: 54px;
+    margin-bottom: 86px;
+}
+
+.brand__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand__block {
+    text-align: center;
+}
+
+.brand__img {
+    margin-top: 104px;
+    margin-bottom: 54px;
+    width: 107px;
+}
+
+.services__title {
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 146%;
+    text-align: center;
+    color: #373737;
+    margin-top: 125px;
+    margin-bottom: 25px;
+}
+
+.services__text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 173%;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+
+
+.services__item {
+    border-radius: 15px;
+    width: 344px;
+    padding: 30px;
+}
+
+.services__item_title1 {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 154%;
+    color: #37474f;
+    margin-bottom: 10px;
+}
+
+.services__item__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.03em;
+    color: rgba(55, 71, 79, 0.72);
+    margin-bottom: 24px;
+}
+
+.services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 47px;
+}
+
+.news__title {
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 146%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: black;
+    margin-top: 102px;
+    margin-bottom: 25px;
+}
+
+.news__text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 173%;
+    text-align: center;
+    color: #7d7d7d;
+    margin-bottom: 119px;
+}
+
+.news__list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nwes__block {
+    padding: 50px;
+    text-align: center;
+}
+
+.news-img {
+    width: 100%;
+}
+
+.news__item {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0px gray;
+    padding-bottom: 30px;
+}
+
+.news__item__time {
+    font-weight: 900;
+    font-size: 16px;
+    color: black;
+}
+
+.news__time {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    margin-bottom: 15px;
+    margin-left: 26px;
+}
+
+
+.news__item__title {
+    font-weight: 700;
+    font-size: 22px;
+    color: #252525;
+    width: 90%;
+    text-align: start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news_btnn {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 182%;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+    width: 226px;
+    padding: 15px 30px;
+    margin-top: 146px;
+    background-color: blueviolet;
+    color: aliceblue;
+    
+}
+
+.news {
+    background-color: rgb(152, 148, 148)
+}
+
+.news_btnn {
+    display: inline-block;
+}
+
+.icon{
+    margin-left: 30px;
 }
