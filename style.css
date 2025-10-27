@@ -1,0 +1,62 @@
+body {
+  font-family: sans-serif;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+
+.form {
+  margin-bottom: 20px;
+}
+
+
+
+
+#taskInput {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+
+
+
+}
+
+
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  background: #fff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.edit {
+  background: orange;
+  color: white;
+
+
+  
+}
+
+
+
+.delete {
+  background: red;
+  color: white;
+}
