@@ -4,7 +4,8 @@ import { SearchBar } from '../Header/serchBar';
 import strelka from '../../assets/Icons/strelka.svg';
 import { Link } from 'react-router-dom';
 import odam from '../../assets/Icons/odam.svg';
-import {Navbar} from './navbar.jsx';
+
+
 export const Header = () => {
     return (
         <header className="py-[21px]">
@@ -26,7 +27,6 @@ export const Header = () => {
                     </div>
                 </div>
             </div>
-            <Navbar />
         </header>
     )
 }
