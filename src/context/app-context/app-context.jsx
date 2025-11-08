@@ -16,9 +16,10 @@ const appreducer = (state, action) => {
             };
         case "UPDATE_USER":
             return {
-                // ...state, list: state.list.map((i)=>{
-                //     i.id==action.id?i.username=action.
-                // })
+                ...state,
+                list: state.list.map((item) =>
+                    item.id === action.value.id ? { ...item, username: action.value.username } : item
+                ),
             };
         default:
             return state;
