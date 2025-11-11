@@ -1,8 +1,9 @@
 import React from "react"
+import { getItem, saveState } from "../../config/store-config";
 
 export const AppContextWrapper = React.createContext();
 
-const initialValue = {
+const initialValue = getItem("users") || {
     list: []
 }
 
@@ -28,7 +29,9 @@ const appreducer = (state, action) => {
 
 export const AppContext = ({ children }) => {
     const [data, dispatch] = React.useReducer(appreducer, initialValue)
-
+React.useEffect(()=>{
+    saveState("users",data)
+},[data])
     return (
         <>
             <AppContextWrapper.Provider value={{ data, dispatch }}>
